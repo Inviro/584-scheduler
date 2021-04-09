@@ -14,9 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('auth.login'); // defaulted to initial login screen we can keep this here or change it later on
 });
 
+// Will require user to be verified before being able to access site
 Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Everything wrapped in here will be protected from back history
+Route::group(['middleware' => ['prevent-back-history']],function(){
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+});
