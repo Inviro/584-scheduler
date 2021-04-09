@@ -14,15 +14,20 @@ Scheduling application that written using [Laravel](https://laravel.com/) and [V
 1. Clone the repository
 2. Install [PHP](https://www.php.net/downloads), [Composer](https://getcomposer.org/download/), and [Node.js](https://nodejs.org/en/) if needed
 3. Make a copy of `.env.example` and rename it to `.env`
-4. Run the following commands:
+4. Make sure that lines 10 - 15 in `.env` point to the correct database
+  * If you are using [XAMPP](https://www.apachefriends.org/download.html), you just need to create a new database
+5. Start your SQL server (optional)
+6. Run the following commands:
     ```js
     $ php artisan key:generate
     $ composer install
-    $ php artisan serve
     $ npm install
+    $ php artisan migrate
+    // Start backend
+    $ php artisan serve
+    // Start frontend
     $ npm run watch
     ```
-## API
 ---
 
 <br>
