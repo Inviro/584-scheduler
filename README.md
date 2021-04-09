@@ -1,16 +1,17 @@
 # 584-scheduler
-
----
-
 Scheduling application that written using [Laravel](https://laravel.com/) and [Vue.js](https://vuejs.org/)
+
+<br>
 
 # Table of Contents
 - [Installation](#installiation)
 - [API](#api)
     * TBD
 - [License](#license)
-## Installation
----
+
+<br>
+
+# Installation
 1. Clone the repository
 2. Install [PHP](https://www.php.net/downloads), [Composer](https://getcomposer.org/download/), and [Node.js](https://nodejs.org/en/) if needed
 3. Make a copy of `.env.example` and rename it to `.env`
@@ -28,7 +29,6 @@ Scheduling application that written using [Laravel](https://laravel.com/) and [V
     // Start frontend
     $ npm run watch
     ```
----
 
 <br>
 
@@ -60,6 +60,8 @@ Authorization: ...
 * **Error Responses:**
   > **Code:** 403 Forbidden, 401 UNAUTHORIZED, 400 BAD REQUEST
 
-## License
----
+
+<br>
+
+# License
 This project is currently unlicensed, but check again soon for updates!
