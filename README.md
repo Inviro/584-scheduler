@@ -7,13 +7,18 @@ Scheduling application that written using [Laravel](https://laravel.com/) and [V
 # Table of Contents
 - [Installation](#installiation)
 - [API](#api)
- * TBD
+    * TBD
+- [License](#license)
 ## Installation
+---
 1. Clone the repository
-2. Install [Composer](https://getcomposer.org/download/) and [Node.js](https://nodejs.org/en/) if needed
-3. Run the following commands:
+2. Install [PHP](https://www.php.net/downloads), [Composer](https://getcomposer.org/download/), and [Node.js](https://nodejs.org/en/) if needed
+3. Make a copy of `.env.example` and rename it to `.env`
+4. Run the following commands:
     ```js
+    $ php artisan key:generate
     $ composer install
+    $ php artisan serve
     $ npm install
     $ npm run watch
     ```
@@ -52,3 +57,4 @@ Authorization: ...
 
 ## License
 ---
+This project is currently unlicensed, but check again soon for updates!
