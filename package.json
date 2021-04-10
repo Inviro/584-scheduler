@@ -7,7 +7,8 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production"
+        "production": "mix --production",
+        "setup": "php artisan key:generate && composer install && npm install && php artisan migrate"
     },
     "devDependencies": {
         "axios": "^0.21",
