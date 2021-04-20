@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // return view('auth.login'); // defaulted to initial login screen we can keep this here or change it later on
-    return view('google_auth.login');
+    return view('auth.login'); // defaulted to initial login screen we can keep this here or change it later on
 });
+
+Route::get('auth/google', 'App\Http\Controllers\Auth\GoogleController@redirectToProvider');
+Route::get('/callback', 'App\Http\Controllers\Auth\GoogleController@handleProviderCallback');
 
 // Will require user to be verified before being able to access site
 Auth::routes(['verify' => true]);

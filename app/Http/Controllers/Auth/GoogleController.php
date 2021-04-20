@@ -1,12 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\GoogleAuth;
+namespace App\Http\Controllers\Auth;
 
+use Socialite;
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use Laravel\Socialite\Facades\Socialite;
+use App\Models\User;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 
-class LoginController extends Controller
+class GoogleController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -19,8 +21,6 @@ class LoginController extends Controller
     |
     */
 
-    // use AuthenticatesUsers;
-
     /**
      * Redirects to provider following successful OAuth
      *
@@ -31,16 +31,6 @@ class LoginController extends Controller
         return Socialite::driver('google')->redirect();
     }
 
-    // /**
-    //  * Create a new controller instance.
-    //  *
-    //  * @return void
-    //  */
-    // public function __construct()
-    // {
-    //     $this->middleware('guest')->except('logout');
-    // }
-
     /**
      * Obtain the user information from Google.
      *
@@ -48,27 +38,30 @@ class LoginController extends Controller
      */
     public function handleProviderCallback()
     {
+
         try {
             $user = Socialite::driver('google')->user();
         } catch (\Exception $e) {
             return redirect('/login');
-        }        // only allow people with @company.com to login
-        if(explode("@", $user->email)[1] !== 'company.com'){
-            return redirect()->to('/');
-        }        // check if they're an existing user
+        }
+        
+        // check if they're an existing user
         $existingUser = User::where('email', $user->email)->first();        
         if($existingUser){
             // log them in
             auth()->login($existingUser, true);
         } else {
             // create a new user
-            $newUser                  = new User;
-            $newUser->name            = $user->name;
-            $newUser->email           = $user->email;
-            $newUser->google_id       = $user->id;
-            $newUser->avatar          = $user->avatar;
-            $newUser->avatar_original = $user->avatar_original;
-            $newUser->save();            auth()->login($newUser, true);
+            $newUser                    = new User;
+            $newUser->name              = $user->name;
+            $newUser->email             = $user->email;
+            $newUser->google_id         = $user->id;
+            // Creates a random cryptographically secure password that is 20 characters long
+            // Uses https://www.php.net/manual/en/function.random-bytes.php
+            $newUser->password          = Hash::make(Str::random(20));
+            $newUser->email_verified_at = date('Y-m-d H:i:s'); // Setting email verification time since it is verified by Google
+            $newUser->save();
+            auth()->login($newUser, true);
         }
         return redirect()->to('/home');
     }
