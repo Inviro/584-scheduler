@@ -57,11 +57,16 @@
                                     {{ __('Login') }}
                                 </button>
 
+                                <button type="button" class="btn" onclick="location.href = 'auth/google'">
+                                    <img src="/images/btn_google_signin_light_normal_web@2x.png" alt="Log in with Google" id="google-login" width="200px">
+                                </button>
+
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+
                             </div>
                         </div>
                     </form>
