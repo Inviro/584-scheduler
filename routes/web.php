@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('auth/google', 'App\Http\Controllers\Auth\GoogleController@redirectToProvider');
-Route::get('/callback', 'App\Http\Controllers\Auth\GoogleController@handleProviderCallback');
+Route::get(env('GOOGLE_REDIRECT'), 'App\Http\Controllers\Auth\GoogleController@handleProviderCallback');
 
 // Will require user to be verified before being able to access site
 Auth::routes(['verify' => true]);
