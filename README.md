@@ -15,8 +15,11 @@ Scheduling application that written using [Laravel](https://laravel.com/) and [V
 1. Clone the repository
 2. Install [PHP](https://www.php.net/downloads), [Composer](https://getcomposer.org/download/), and [Node.js](https://nodejs.org/en/) if needed
 3. Make a copy of `.env.example` and rename it to `.env`
-4.  Make sure that lines 10 - 15 in `.env` point to the correct database
-  * If you are using [XAMPP](https://www.apachefriends.org/download.html), you just need to create a new database named `laravel`
+4. Fill out `.env` with correct information
+  * Make sure that lines 10 - 15 in point to the correct database name and credentials
+    * If you are using [XAMPP](https://www.apachefriends.org/download.html), you just need to create a new database named `laravel`
+  * Fill in the lines starting with `GOOGLE_` with a valid Google OAuth 2.0 Client ID
+    * These can be obtained by following the detailed instructions [here](https://developers.google.com/adwords/api/docs/guides/authentication#create_a_client_id_and_client_secret).
 5. Start up your SQL server
 6. Run Setup Commands:
     ```properties
