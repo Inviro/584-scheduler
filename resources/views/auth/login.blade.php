@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <img src="/images/KhroNotes.svg" height="100px">
                 <div class="card-header">{{ __('Login') }}</div>
-
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -57,16 +57,18 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                <button type="button" class="btn" onclick="location.href = 'auth/google'">
-                                    <img src="/images/btn_google_signin_light_normal_web@2x.png" alt="Log in with Google" id="google-login" width="200px">
-                                </button>
+                                <a class="btn btn-outline-secondary" href="auth/google" role="button" style="text-transform:none">
+                                    <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="/images/Google_'G'_Logo.svg" />
+                                    Login with Google
+                                </a>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
+                                    <div class="row">
+                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                            {{ __('Forgot Your Password?') }}
+                                        </a>
+                                    </div>
                                 @endif
-
                             </div>
                         </div>
                     </form>
