@@ -7,7 +7,8 @@
     <div class="container">
       
       <div class="image_box">
-        <img class="body_logo" src="https://cdn.glitch.com/8ad63a84-17dc-432f-8c26-21efc67491b6%2FTransparentLogo.png?v=1620239174125"/>
+        <img class="body_logo" src="https://cdn.glitch.com/8ad63a84-17dc-432f-8c26-21efc67491b6%2FUpdatedCalendar.jpg?v=1620968857371"/>
+        <p>Keep Your Meetings Organized</p> 
       </div>
       
       

@@ -22,7 +22,7 @@
   
   .footer{
     background-color: #D2D0C9;
-    height: 75px;
+    /* height: 75px; */
     text-align: center;
     margin: 10px;
     padding: 10px;
@@ -92,18 +92,29 @@
   }
   
   .body_logo{
-    max-width: 10vw;
-    padding: 20px;
+    max-width: 100%;
+    max-height: 100vh;
     margin: auto;
-    display: block;
   }
   
   .image_box{
-    flex: 1;
-    margin: 50px; 
-    background-image: url("https://cdn.glitch.com/8ad63a84-17dc-432f-8c26-21efc67491b6%2Fcalendar_2021.png?v=1620254453997");
-    background-repeat: no-repeat;
-    background-size: 300px auto;
+    display: grid;
+    height: 100%;
+  }
+
+  .image_box p{
+    text-align: center;
+    padding: 20px;
+    font-size: 75px;
+  }
+
+  .stay_organized{
+    position: absolute;
+    background-color: black;
+    bottom: 20px;
+    right: 20px;
+    padding-left: 20px;
+    padding-right:20px;
   }
   
   .desc_box{
@@ -112,6 +123,7 @@
     font-weight: 100;
     text-align: center;
     margin: 50px;
+  
   }
   
   .howitworks_box{
