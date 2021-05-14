@@ -13,7 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
+    return view('landing.landingPage'); //defaulted to landing page, where user can then login to the application
+});
+
+Route::get('/login', function () {
     return view('auth.login'); // defaulted to initial login screen we can keep this here or change it later on
 });
 

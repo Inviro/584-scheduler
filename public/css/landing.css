@@ -1,0 +1,143 @@
+
+  
+  body {
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      background-color: #F5F3E7;
+  }
+    
+  @keyframes fadeInAnimation {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+       }
+  }
+  
+  body, a, button{
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .footer{
+    background-color: #D2D0C9;
+    height: 75px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  
+  .logo{
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .logo_button{
+    margin-right: auto;
+    font-weight: 100;
+    background-color: Transparent;
+  }
+  
+  .logo_button:hover{
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  .header{
+    padding: 20px 10px;
+    display: flex;
+    flex: 1 1 0;
+    font-size: 20px;
+    height: 75px;
+  }
+  
+  .logo_image{
+    /* justify-content: center; */
+    height: 50px;
+    /* width: 100px; */
+  }
+  
+  
+  .button-login{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: 100;
+    background-color: Transparent;
+    border: none;
+  }
+  
+  .button-login:hover{
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  
+  /* container properties */
+  
+  .break {
+    flex-basis: 100%;
+    height: 0;
+    border-width: thin;
+    border-style: solid;
+    border-color: gray;
+  }
+  
+  .container{
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .body_logo{
+    max-width: 10vw;
+    padding: 20px;
+    margin: auto;
+    display: block;
+  }
+  
+  .image_box{
+    flex: 1;
+    margin: 50px; 
+    background-image: url("https://cdn.glitch.com/8ad63a84-17dc-432f-8c26-21efc67491b6%2Fcalendar_2021.png?v=1620254453997");
+    background-repeat: no-repeat;
+    background-size: 300px auto;
+  }
+  
+  .desc_box{
+    flex: 1;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    margin: 50px;
+  }
+  
+  .howitworks_box{
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    margin: 50px;
+    flex: 1;
+  }
+  
+  .google_box{
+    flex: 1;
+  }
+  
+  .google_logo{
+    max-width: 60vw;
+    flex: 1;
+    padding: 20px;
+    margin: auto;
+    display: block;
+  }
+  
+  .get_started{
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    margin: 50px;
+    flex: 1;
+  }
