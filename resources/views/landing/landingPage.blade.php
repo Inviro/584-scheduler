@@ -75,8 +75,12 @@
           To get started, please register or sign in with your Google account.
         </p>
         
-        <button>
+        <!-- <button>
           Google Button Placeholder
+        </button> -->
+
+        <button type="button" class="btn" onclick="location.href = 'auth/google'">
+            <img src="/images/btn_google_signin_light_normal_web@2x.png" alt="Log in with Google" id="google-login" width="300px">
         </button>
       </div><!--get_started-->
       
@@ -88,7 +92,7 @@
         <img src="https://cdn.glitch.com/8ad63a84-17dc-432f-8c26-21efc67491b6%2FTransparentLogo.png?v=1620239174125" style="max-width:1vw;"/>
         <br>
         &copy;2021 KhroNotes<br>
-        Created By
+        
     </footer>
 
 
