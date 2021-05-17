@@ -25,7 +25,7 @@
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
     <script src="https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous"></script>
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
@@ -34,7 +34,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     <!-- {{ str_replace('_', ' ', config('app.name', 'Laravel')) }} -->
                     <button class="logo_button" style="font-size:36px; border: none;">KhroNotes</button>
                 </a>
@@ -49,9 +49,9 @@
                     </ul>
 
                     <!-- center of nav -->
-                    <ul class="navbar-nav mc-auto">
+                    <!-- <ul class="navbar-nav mc-auto">
                         <img class="logo_image" src="https://cdn.glitch.com/8ad63a84-17dc-432f-8c26-21efc67491b6%2FTransparentLogo.png?v=1620239174125" />
-                    </ul>
+                    </ul> -->
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
