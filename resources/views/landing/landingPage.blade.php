@@ -74,14 +74,13 @@
         <p>
           To get started, please register or sign in with your Google account.
         </p>
-        
-        <!-- <button>
-          Google Button Placeholder
-        </button> -->
 
-        <button type="button" class="btn" onclick="location.href = 'auth/google'">
-            <img src="/images/btn_google_signin_light_normal_web@2x.png" alt="Log in with Google" id="google-login" width="300px">
-        </button>
+        <form action="auth/google">
+          <button class="btn btn-light" type="submit" onclick="console.log('clicked!')">
+            <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="{{ URL::to('/') }}/images/Google_'G'_Logo.svg" />
+            Login with Google
+          </button>
+        </form>
       </div><!--get_started-->
       
     </div><!--container-->
