@@ -1,0 +1,202 @@
+
+  
+  body {
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      background-color: #F5F3E7;
+  }
+    
+  @keyframes fadeInAnimation {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+       }
+  }
+  
+  body, a, button{
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .footer{
+    background-color: #D2D0C9;
+    /* height: 75px; */
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  
+  .logo{
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .logo_button{
+    margin-right: auto;
+    font-weight: 100;
+    background-color: Transparent;
+  }
+  
+  .logo_button:hover{
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  .header{
+    padding: 20px 10px;
+    display: flex;
+    flex: 1 1 0;
+    font-size: 20px;
+    height: 75px;
+  }
+  
+  .logo_image{
+    /* justify-content: center; */
+    height: 50px;
+    /* width: 100px; */
+  }
+  
+  
+  .button-login{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: 100;
+    background-color: Transparent;
+    border: none;
+  }
+  
+  .button-login:hover{
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  
+  /* container properties */
+  
+  .break {
+    flex-basis: 100%;
+    height: 0;
+    border-width: thin;
+    border-style: solid;
+    border-color: gray;
+  }
+  
+  .container{
+    /* display: flex; */
+    flex: 1 1 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .body_logo{
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+  }
+  
+  .image_box{
+    display: grid;
+    height: 100%;
+  }
+
+  .image_box p{
+    text-align: center;
+    padding: 20px;
+    font-size: 75px;
+  }
+
+  .stay_organized{
+    position: absolute;
+    background-color: black;
+    bottom: 20px;
+    right: 20px;
+    padding-left: 20px;
+    padding-right:20px;
+  }
+  
+  .desc_box{
+    flex: 1;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    margin: 50px;
+  
+  }
+  
+  .howitworks_box{
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    margin: 50px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+  }
+
+  .step_cards{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin-left: 25px;
+  }
+
+  .step_cards:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .step_desc{
+    padding: 2px 16px;
+    font-size: 24px;
+  }
+
+  .why_khro{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin: 50px;
+    padding: 15px;
+  }
+
+  .why_khro:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .why_khro p{
+    font-size: 24px;
+  }
+
+  .why_khro h1{
+    text-align: center;
+  }
+
+  ul.benefits {
+    list-style-type: circle;
+    font-size: 20px;
+    font-weight: 200;
+  }
+  
+  .google_box{
+    flex: 1;
+  }
+  
+  .google_logo{
+    max-width: 60vw;
+    flex: 1;
+    padding: 20px;
+    margin: auto;
+    display: block;
+  }
+  
+  .get_started{
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    margin: 50px;
+    flex: 1;
+  }
