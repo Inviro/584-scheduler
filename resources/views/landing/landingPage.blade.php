@@ -76,7 +76,7 @@
         </p>
 
         <form action="auth/google">
-          <button class="btn btn-outline-secondary" type="submit" onclick="console.log('clicked!')">
+          <button class="btn btn-light" type="submit" onclick="console.log('clicked!')">
             <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="{{ URL::to('/') }}/images/Google_'G'_Logo.svg" />
             Login with Google
           </button>
