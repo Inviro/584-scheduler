@@ -131,7 +131,54 @@
     font-weight: 100;
     text-align: center;
     margin: 50px;
+    display: flex;
     flex: 1;
+    flex-direction: row;
+  }
+
+  .step_cards{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin-left: 25px;
+  }
+
+  .step_cards:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .step_desc{
+    padding: 2px 16px;
+    font-size: 24px;
+  }
+
+  .why_khro{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin: 50px;
+    padding: 15px;
+  }
+
+  .why_khro:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .why_khro p{
+    font-size: 24px;
+  }
+
+  .why_khro h1{
+    text-align: center;
+  }
+
+  ul.benefits {
+    list-style-type: circle;
+    font-size: 20px;
+    font-weight: 200;
   }
   
   .google_box{
