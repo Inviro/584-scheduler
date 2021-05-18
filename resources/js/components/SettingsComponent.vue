@@ -5,11 +5,11 @@
           <div class="card">
             <div class="card-header">Update Account Information</div>
             <div class="card-body">
-              <form>
+              <form method="POST" action="updateProfile">
                 <input type="hidden" name="_token" v-bind:value="csrf">
                 <div class="form-group">
                   <label for="display-name">Display Name</label>
-                  <input class="form-control profile-field" id="display-name" :value="user.name" disabled>
+                  <input type="text" name="name" class="form-control profile-field" id="display-name" :value="user.name" disabled>
                 </div>
                 <div class="form-group">
                   <label for="email">Email address</label>
@@ -32,6 +32,19 @@
             </div>
           </div>
         </div>
+
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header">Change Theme</div>
+            <div class="card-body">
+              <div class="custom-control custom-switch">
+                <input class="custom-control-input" type="checkbox" id="enableDarkMode">
+                <label class="custom-control-label" for="enableDarkMode">Enable Dark Mode</label>
+              </div>       
+            </div>
+          </div>
+        </div>
+    
     </div>
   </div>
 </template>
@@ -46,3 +59,4 @@ export default {
 }
 </script>
 
+ 
