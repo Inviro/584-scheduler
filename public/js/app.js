@@ -1930,6 +1930,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -37640,10 +37642,24 @@ var render = function() {
                     type: "text",
                     name: "name",
                     id: "display-name",
+                    onkeyup: "nameCheck()",
                     disabled: ""
                   },
                   domProps: { value: _vm.user.name }
-                })
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "text-danger d-none",
+                    staticStyle: {
+                      "margin-top": ".25rem",
+                      "font-size": ".875em"
+                    },
+                    attrs: { id: "dNameWarning" }
+                  },
+                  [_vm._v("Display Name CAN NOT be empty!")]
+                )
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "form-group" }, [
@@ -37653,9 +37669,27 @@ var render = function() {
                 _vm._v(" "),
                 _c("input", {
                   staticClass: "form-control profile-field",
-                  attrs: { type: "email", id: "email", disabled: "" },
+                  attrs: {
+                    type: "email",
+                    id: "email",
+                    onkeyup: "emailCheck()",
+                    disabled: ""
+                  },
                   domProps: { value: _vm.user.email }
-                })
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "text-danger d-none",
+                    staticStyle: {
+                      "margin-top": ".25rem",
+                      "font-size": ".875em"
+                    },
+                    attrs: { id: "emailWarning" }
+                  },
+                  [_vm._v("Please provide a valid email address")]
+                )
               ]),
               _vm._v(" "),
               _vm._m(0),
@@ -37702,8 +37736,8 @@ var staticRenderFns = [
         staticClass: "form-control profile-field",
         attrs: {
           type: "password",
+          name: "oldpassword",
           id: "old-pass",
-          placeholder: "Password",
           disabled: ""
         }
       })
@@ -37761,7 +37795,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-8" }, [
+    return _c("div", { staticClass: "col-md-8 mt-4" }, [
       _c("div", { staticClass: "card" }, [
         _c("div", { staticClass: "card-header" }, [_vm._v("Change Theme")]),
         _vm._v(" "),

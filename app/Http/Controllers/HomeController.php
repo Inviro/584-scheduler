@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use \Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
@@ -20,10 +21,17 @@ class HomeController extends Controller
 
     public function updateProfile(Request $request) 
     {
+        $passwordCheck = $request->input('oldpassword');
         $userUpdate = [
-            'name'      => $request->name
+            'name'          => $request->name,
+            'email'         => $request->email
         ];
-        DB::table('users')->where('id', '=', Auth::user()->id)->update($userUpdate);
+        if(Hash::check($passwordCheck, Auth::user()->password)) {
+            DB::table('users')->where('id', '=', Auth::user()->id)->update($userUpdate);
+        }
+        else {
+            
+        }
         return redirect('settings');
     }
 

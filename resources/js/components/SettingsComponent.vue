@@ -9,15 +9,17 @@
                 <input type="hidden" name="_token" v-bind:value="csrf">
                 <div class="form-group">
                   <label for="display-name">Display Name</label>
-                  <input type="text" name="name" class="form-control profile-field" id="display-name" :value="user.name" disabled>
+                  <input type="text" name="name" class="form-control profile-field" id="display-name" :value="user.name" onkeyup="nameCheck()" disabled>
+                  <span id="dNameWarning" class="text-danger d-none" style="margin-top:.25rem;font-size:.875em;">Display Name CAN NOT be empty!</span>
                 </div>
                 <div class="form-group">
                   <label for="email">Email address</label>
-                  <input type="email" class="form-control profile-field" id="email" :value="user.email" disabled>
+                  <input type="email" class="form-control profile-field" id="email" :value="user.email" onkeyup="emailCheck()" disabled>
+                  <span id="emailWarning" class="text-danger d-none" style="margin-top:.25rem;font-size:.875em;">Please provide a valid email address</span>
                 </div>
                 <div class="form-group">
                   <label for="old-pass">Old Password</label>
-                  <input type="password" class="form-control profile-field" id="old-pass" placeholder="Password" disabled>
+                  <input type="password" name="oldpassword" class="form-control profile-field" id="old-pass" disabled>
                 </div>
                 <div class="form-group">
                   <label for="new-pass">New Password</label>
@@ -33,7 +35,7 @@
           </div>
         </div>
 
-        <div class="col-md-8">
+        <div class="col-md-8 mt-4">
           <div class="card">
             <div class="card-header">Change Theme</div>
             <div class="card-body">
