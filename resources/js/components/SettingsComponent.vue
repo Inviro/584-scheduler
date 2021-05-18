@@ -8,16 +8,20 @@
               <form>
                 <input type="hidden" name="_token" v-bind:value="csrf">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Username</label>
-                  <input class="form-control profile-field" id="exampleInputEmail1"  :value="user.name" disabled>
+                  <label for="display-name">Display Name</label>
+                  <input class="form-control profile-field" id="display-name" :value="user.name" disabled>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control profile-field" :value="user.email" disabled>
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control profile-field" id="email" :value="user.email" disabled>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control profile-field" id="exampleInputPassword1" placeholder="Password" disabled>
+                  <label for="old-pass">Old Password</label>
+                  <input type="password" class="form-control profile-field" id="old-pass" placeholder="Password" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="new-pass">New Password</label>
+                  <input type="password" class="form-control profile-field" id="new-pass" placeholder="Password" disabled>
                 </div>
                 <div class="form-check">
                 </div>

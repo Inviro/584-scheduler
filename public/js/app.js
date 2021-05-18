@@ -1913,6 +1913,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -37613,30 +37617,32 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                  _vm._v("Username")
+                _c("label", { attrs: { for: "display-name" } }, [
+                  _vm._v("Display Name")
                 ]),
                 _vm._v(" "),
                 _c("input", {
                   staticClass: "form-control profile-field",
-                  attrs: { id: "exampleInputEmail1", disabled: "" },
+                  attrs: { id: "display-name", disabled: "" },
                   domProps: { value: _vm.user.name }
                 })
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                _c("label", { attrs: { for: "email" } }, [
                   _vm._v("Email address")
                 ]),
                 _vm._v(" "),
                 _c("input", {
                   staticClass: "form-control profile-field",
-                  attrs: { type: "email", disabled: "" },
+                  attrs: { type: "email", id: "email", disabled: "" },
                   domProps: { value: _vm.user.email }
                 })
               ]),
               _vm._v(" "),
               _vm._m(0),
+              _vm._v(" "),
+              _vm._m(1),
               _vm._v(" "),
               _c("div", { staticClass: "form-check" }),
               _vm._v(" "),
@@ -37654,9 +37660,9 @@ var render = function() {
                 [_vm._v("Update Account")]
               ),
               _vm._v(" "),
-              _vm._m(1),
+              _vm._m(2),
               _vm._v(" "),
-              _vm._m(2)
+              _vm._m(3)
             ])
           ])
         ])
@@ -37670,15 +37676,31 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-        _vm._v("Password")
-      ]),
+      _c("label", { attrs: { for: "old-pass" } }, [_vm._v("Old Password")]),
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control profile-field",
         attrs: {
           type: "password",
-          id: "exampleInputPassword1",
+          id: "old-pass",
+          placeholder: "Password",
+          disabled: ""
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "new-pass" } }, [_vm._v("New Password")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control profile-field",
+        attrs: {
+          type: "password",
+          id: "new-pass",
           placeholder: "Password",
           disabled: ""
         }
