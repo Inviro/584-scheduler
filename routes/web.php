@@ -33,5 +33,6 @@ Auth::routes(['verify' => true]);
 Route::group(['middleware' => ['prevent-back-history']],function(){
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/settings', [App\Http\Controllers\HomeController::class, 'settings'])->name('settings');
 
 });
