@@ -8,77 +8,42 @@
 
 <div class="container">
     <div class="greeting">
+
         <h1>Hello, {{ Auth::user()->name }}</h1>
+
         <h2>This Week's Schedule:</h2>
     </div>
 
     <div class="break"></div>
+    </div>
+
+<!-- button to edit -->
+<a href="/home/create/" class="btn btn-secondary btn-lg" style="padding-right: 15px;padding-left: 15px;margin-right: 35%;margin-left: 35%; float:right;">New</a>
+
+<div class = "container">
 <div class="scrollable_cards">
-    <div class="cards">
+        @foreach($events as $event)
+        <a href = "/home/{{$event->id}}"style="color: black">
+            <div class="cards">
                     <div class="cards_desc">
-                        <h4> Monday 5/17 </h4>
-                            <ul class="items_list">
-                                <li class="list-group-item">
-                                    <a href="www.zoom.com/" class="card-link">Zoom Link</a>
-                                </li>
-                                <li class="list-group-item">Second Item</li>
-                                <li class="list-group-item">Third Item</li>
-                            </ul>
-                    </div>
-    </div>
+                        <h4>{{$event->eventTime}}</h4>
+                        <h6>{{$event->title}}</h6>
+                        <ul class="items_list">
+                            <li class="list-group-item">
+                                <a href="{{$event->eventLink}}" class="card-link">Zoom link</a>
+                            </li>
+                            <li class="list-group-item">{{$event->eventId}}</li>
+                            <li class="list-group-item">{{$event->eventPassword}}</li>
 
-    <div class="cards">
-                    <div class="cards_desc">
-                        <h4> Tuesday 5/18 </h4>
-                            <ul class="items_list">
-                                <li class="list-group-item">
-                                    <a href="www.zoom.com/" class="card-link">Zoom Link</a>
-                                </li>
-                                <li class="list-group-item">Second Item</li>
-                                <li class="list-group-item">Third Item</li>
-                            </ul>
+                        </ul>
                     </div>
-    </div>
-
-    <div class="cards">
-                    <div class="cards_desc">
-                        <h4> Wednesday 5/19 </h4>
-                            <ul class="items_list">
-                                <li class="list-group-item">
-                                    <a href="www.zoom.com/" class="card-link">Zoom Link</a>
-                                </li>
-                                <li class="list-group-item">Second Item</li>
-                                <li class="list-group-item">Third Item</li>
-                            </ul>
-                    </div>
-    </div>
-
-    <div class="cards">
-                    <div class="cards_desc">
-                        <h4> Thursday 5/20 </h4>
-                            <ul class="items_list">
-                                <li class="list-group-item">
-                                    <a href="www.zoom.com/" class="card-link">Zoom Link</a>
-                                </li>
-                                <li class="list-group-item">Second Item</li>
-                                <li class="list-group-item">Third Item</li>
-                            </ul>
-                    </div>
-    </div>
-
-    <div class="cards">
-                    <div class="cards_desc">
-                        <h4> Friday 5/21 </h4>
-                            <ul class="items_list">
-                                <li class="list-group-item">
-                                    <a href="www.zoom.com/" class="card-link">Zoom Link</a>
-                                </li>
-                                <li class="list-group-item">Second Item</li>
-                                <li class="list-group-item">Third Item</li>
-                            </ul>
-                    </div>
-    </div>
-
+                </div>
+        
+        
+        </a>
+        @endforeach
+        {{$events->links()}}
+    
 
 </div>
 
