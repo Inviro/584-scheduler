@@ -4,7 +4,30 @@ function updateProfileBtnToggle() {
   document.getElementById("cancelChanges").classList.toggle("d-none");
   document.getElementById("saveChanges").classList.toggle("d-none");
   document.getElementById("updateProfile").classList.toggle("d-none");
+  document.getElementById('old-pass').classList.add('is-invalid');
+  document.getElementById('passwordWarning').classList.remove('d-none');
+  
+  
+  document.getElementById("saveChanges").setAttribute("disabled", true);
 
+  for(let i = inputField.length - 1; i >= 0; i--){
+    inputField[i].toggleAttribute("disabled");
+  }
+
+}
+
+function cancelChangesBtn() {
+  let inputField = document.querySelectorAll('.profile-field');
+  let passwordField = document.getElementById('old-pass');
+  passwordField.classList.remove('is-invalid');
+  passwordField.classList.remove('is-valid');
+  passwordField.value = "";
+
+  document.getElementById("cancelChanges").classList.toggle("d-none");
+  document.getElementById("saveChanges").classList.toggle("d-none");
+  document.getElementById("updateProfile").classList.toggle("d-none");
+  document.getElementById('passwordWarning').classList.add('d-none');
+  document.getElementById("saveChanges").removeAttribute("disabled");
 
   for(let i = inputField.length - 1; i >= 0; i--){
     inputField[i].toggleAttribute("disabled");
@@ -48,6 +71,23 @@ function emailCheck() {
     email.classList.remove("is-valid");
     email.classList.add("is-invalid");
     emailWarn.classList.remove("d-none");
+    document.getElementById("saveChanges").setAttribute("disabled", true);
+  }
+}
+
+function passwordCheck() {
+  var password = document.getElementById('old-pass');
+  var passWarn = document.getElementById('passwordWarning');
+  if (password.value != "") {
+    password.classList.remove("is-invalid");
+    password.classList.add("is-valid");
+    passWarn.classList.add("d-none");
+    document.getElementById("saveChanges").removeAttribute("disabled");
+  }
+  else {
+    password.classList.remove("is-valid");
+    password.classList.add("is-invalid");
+    passWarn.classList.remove("d-none");
     document.getElementById("saveChanges").setAttribute("disabled", true);
   }
 }

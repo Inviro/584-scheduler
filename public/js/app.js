@@ -1929,9 +1929,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -37694,8 +37691,6 @@ var render = function() {
               _vm._v(" "),
               _vm._m(0),
               _vm._v(" "),
-              _vm._m(1),
-              _vm._v(" "),
               _c("div", { staticClass: "form-check" }),
               _vm._v(" "),
               _c(
@@ -37712,15 +37707,15 @@ var render = function() {
                 [_vm._v("Update Account")]
               ),
               _vm._v(" "),
-              _vm._m(2),
+              _vm._m(1),
               _vm._v(" "),
-              _vm._m(3)
+              _vm._m(2)
             ])
           ])
         ])
       ]),
       _vm._v(" "),
-      _vm._m(4)
+      _vm._m(3)
     ])
   ])
 }
@@ -37730,7 +37725,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "old-pass" } }, [_vm._v("Old Password")]),
+      _c("label", { attrs: { for: "old-pass" } }, [
+        _vm._v("Enter Password to Confirm Changes")
+      ]),
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control profile-field",
@@ -37738,27 +37735,20 @@ var staticRenderFns = [
           type: "password",
           name: "oldpassword",
           id: "old-pass",
+          onkeyup: "passwordCheck()",
           disabled: ""
         }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "new-pass" } }, [_vm._v("New Password")]),
+      }),
       _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control profile-field",
-        attrs: {
-          type: "password",
-          id: "new-pass",
-          placeholder: "Password",
-          disabled: ""
-        }
-      })
+      _c(
+        "span",
+        {
+          staticClass: "text-danger d-none",
+          staticStyle: { "margin-top": ".25rem", "font-size": ".875em" },
+          attrs: { id: "passwordWarning" }
+        },
+        [_vm._v("Password field cannot be empty")]
+      )
     ])
   },
   function() {
@@ -37772,7 +37762,7 @@ var staticRenderFns = [
         attrs: {
           id: "cancelChanges",
           type: "button",
-          onclick: "updateProfileBtnToggle()"
+          onclick: "cancelChangesBtn()"
         }
       },
       [_c("i", { staticClass: "fas fa-times" }), _vm._v(" Cancel")]
