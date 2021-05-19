@@ -38,26 +38,39 @@
         <div class="col-md-8 mt-4">
           <div class="card">
             <div class="card-header">Change Theme</div>
-            <div class="card-body">
-              <div class="custom-control custom-switch">
-                <input class="custom-control-input" type="checkbox" id="enableDarkMode">
-                <label class="custom-control-label" for="enableDarkMode">Enable Dark Mode</label>
-              </div>       
-            </div>
+              <div class="card-body">
+                <form method="POST" action="toggleDarkMode">
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input type="hidden" name="_token" v-bind:value="csrf">
+                      <input class="custom-control-input" type="checkbox" id="dark-mode-toggle" name="darkmode" v-bind:checked="true" v-on:click="toggleDarkMode">
+                      <label class="custom-control-label" for="dark-mode-toggle">Enable Dark Mode</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-success" :disabled="this.darkModeSubmitDisabled" id="submit-dark-mode">&nbsp;Save Changes</button>
+                  </div>
+                </form>
+              </div> 
           </div>
         </div>
-    
     </div>
   </div>
 </template>
 <script>
 export default {
-  data(){
+  data() {
     return {
       csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+      darkModeSubmitDisabled: true,
     }
   },
-  props: ['user']
+  methods: {
+    toggleDarkMode() {
+      this.darkModeSubmitDisabled = !this.darkModeSubmitDisabled
+    }
+  },
+  props: ['user', 'dark_mode']
 }
 </script>
 

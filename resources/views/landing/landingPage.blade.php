@@ -1,4 +1,7 @@
-@extends('layouts.app', ['dark_mode' => Auth::user() && Auth::user()->dark_mode])
+@php
+    $dark_mode = Auth::user() && Auth::user()->dark_mode
+@endphp
+@extends('layouts.app', ['dark_mode' => $dark_mode])
 
 @section('content')
 
