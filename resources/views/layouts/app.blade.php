@@ -34,10 +34,10 @@
 
 <body>
   <div id="app">
-    <nav class="navbar navbar-expand-md shadow-sm {{ $dark_mode ? "navbar-light bg-white": "navbar-dark bg-dark" }} ">
+    <nav class="navbar navbar-expand-md shadow-sm {{ $dark_mode ? "navbar-dark bg-dark" : "navbar-light bg-white"}} ">
       <div class="container">
         <form action="{{ url('/') }}" class="navbar-brand">
-          <button class="logo_button {{ $dark_mode ? "" : "text-light bg-dark"}}" style="font-size:36px; border: none;" type="submit">KhroNotes</button>
+          <button class="logo_button {{ $dark_mode ? "text-light bg-dark" : ""}}" style="font-size:36px; border: none;" type="submit">KhroNotes</button>
         </form>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
           <span class="navbar-toggler-icon"></span>

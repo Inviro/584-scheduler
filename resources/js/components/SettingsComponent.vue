@@ -43,7 +43,7 @@
                   <div class="form-group">
                     <div class="custom-control custom-switch">
                       <input type="hidden" name="_token" v-bind:value="csrf">
-                      <input class="custom-control-input" type="checkbox" id="dark-mode-toggle" name="darkmode" v-bind:checked="true" v-on:click="toggleDarkMode">
+                      <input class="custom-control-input" type="checkbox" id="dark-mode-toggle" name="darkmode" v-bind:checked="dark_mode" v-on:click="toggleDarkMode">
                       <label class="custom-control-label" for="dark-mode-toggle">Enable Dark Mode</label>
                     </div>
                   </div>

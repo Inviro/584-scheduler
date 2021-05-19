@@ -37756,7 +37756,7 @@ var render = function() {
                         id: "dark-mode-toggle",
                         name: "darkmode"
                       },
-                      domProps: { checked: true },
+                      domProps: { checked: _vm.dark_mode },
                       on: { click: _vm.toggleDarkMode }
                     }),
                     _vm._v(" "),
