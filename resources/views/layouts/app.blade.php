@@ -94,7 +94,7 @@
       </div>
     </nav>
 
-    <main class="py-4">
+    <main class="py-4 {{$dark_mode ? "bg-secondary" : ""}}">
       @yield('content')
     </main>
   </div>
