@@ -80,7 +80,7 @@ class PostsController extends Controller
     public function show($id)
     {
         $event = Post::find($id);
-        $dayofweek = Carbon::parse($event->eventTime)->format(format:"D, M d Y");
+        $dayofweek = Carbon::parse($event->eventTime)->format("D, M d Y");
         $event->eventTime = $dayofweek;
         return view('posts.show')->with('event', $event);
     }
