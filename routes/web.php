@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EventsController;
+use App\Http\Controllers\homeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,10 +31,10 @@ Auth::routes(['verify' => true]);
 
 // Everything wrapped in here will be protected from back history
 Route::group(['middleware' => ['prevent-back-history']],function(){
-
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('home', homeController::class);
+    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 });
 
 // resource  controller to handle all CRUD request to show events on home dashboard
-Route::resource('events', EventsController::class);
+// Route::resource('events', EventsController::class);
