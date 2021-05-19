@@ -13,9 +13,10 @@
     </div>
 
 <!-- button to edit -->
-<a href="/home/create/" class="btn btn-secondary btn-lg" style="padding-right: 15px;padding-left: 15px;margin-right: 35%;margin-left: 35%; float:right;">New</a>
+<!-- <a href="/home/create/" class="btn btn-secondary btn-lg" style="padding-right: 15px;padding-left: 15px;margin-right: 35%;margin-left: 35%; float:right;">New</a> -->
 
 <div class = "container">
+
 <div class="scrollable_cards">
         @foreach($events as $event)
         <a href = "/home/{{$event->id}}"style="color: black">
@@ -39,8 +40,14 @@
         @endforeach
         {{$events->links()}}
     
-
+        
 </div>
+
+    <div class="break"></div>
+    
+    <a href="/home/create/" class="btn btn-secondary btn-lg" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px;">
+        New Event
+    </a>
 
     <div class="break"></div>
 
