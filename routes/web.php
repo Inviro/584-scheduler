@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EventsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,3 +35,6 @@ Route::group(['middleware' => ['prevent-back-history']],function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 });
+
+// resource  controller to handle all CRUD request to show events on home dashboard
+Route::resource('events', EventsController::class);
