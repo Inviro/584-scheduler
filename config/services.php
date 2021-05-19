@@ -33,7 +33,7 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => env('APP_URL') . ':' . env('SERVER_PORT') . env('GOOGLE_REDIRECT'),
+        'redirect' => (strcmp(env('APP_ENV'), 'prod') === 0) ? env('APP_URL') . env('GOOGLE_REDIRECT') : env('APP_URL') . ':' . env('SERVER_PORT') . env('GOOGLE_REDIRECT'),
     ]
 
 ];

@@ -2,32 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Models\home;
-use App\Models\User;
-use Socialite;
 
-class homeController extends Controller
+class EventsController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    // @foreach($events as $event)
-    // <p>{{$event->title}}</p>
-    // @endforeach
     public function index()
     {
-        // show all values in sql for home dashboard according to email 
-        $loggedInUser = Auth::user()->email;
-        // $events =  home::all(); //shows all events
-    
-        $events = home::where('email',$loggedInUser)->get();
-        return view('home')
-                    ->with('events', $events);
+        //
     }
 
     /**
@@ -94,6 +80,5 @@ class homeController extends Controller
     public function destroy($id)
     {
         //
-
     }
 }
