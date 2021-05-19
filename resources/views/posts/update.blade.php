@@ -48,7 +48,14 @@
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">update</button>
-                </div>                                                         
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" onclick="return confirm('Are you sure?')"class="btn small btn-danger btn-block" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px;">
+                        delete
+                    </button>
+                </div>
+
             </form>
 
             <form method="POST" action="{{route('home.destroy',$event->id)}}">
@@ -57,12 +64,18 @@
                 <button type="submit" onclick="return confirm('Are you sure?')"class="btn small btn-danger btn-block"><span class="fa fa-remove"></span>delete</button>
             </form>
         </article>
+
+        <!-- <a href="#" return="return confirm('Are you sure?')" class="btn btn-secondary btn-lg" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px;">
+            Delete Event
+        </a> -->
+
+        <!-- <button type="submit" onclick="return confirm('Are you sure?')"class="btn small btn-danger btn-block" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px; width:50%">
+            delete
+        </button> -->
+
     </div> <!-- card.// -->
 
-
-
 </div>
-
 
 
     <div class="break"></div>

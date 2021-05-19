@@ -17,7 +17,7 @@
 </div>
 
 <!-- button to edit -->
-<a href="/home/{{$event->id}}/edit" class="btn btn-secondary btn-lg" style="padding-right: 15px;padding-left: 15px;margin-right: 35%;margin-left: 35%; float:right;">Edit</a>
+<!-- <a href="/home/{{$event->id}}/edit" class="btn btn-secondary btn-lg" style="padding-right: 15px;padding-left: 15px;margin-right: 35%;margin-left: 35%; float:right;">Edit</a> -->
 
 <div class = "container">
     <div class="scrollable_cards">
@@ -46,7 +46,9 @@
     <div class="break"></div>
 
  
-
+    <a href="/home/{{$event->id}}/edit" class="btn btn-secondary btn-lg" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px;">
+        Edit Event
+    </a>
  
 
     <div class="break"></div>
@@ -55,7 +57,7 @@
 </div>
 
 <!-- the footer -->
-    <footer class="footer">
+    <footer class="footer" style="bottom: 0;position: fixed;width: 100%;">
         <img src="https://cdn.glitch.com/8ad63a84-17dc-432f-8c26-21efc67491b6%2FTransparentLogo.png?v=1620239174125" style="max-width:1vw;"/>
         <br>
         &copy;2021 KhroNotes<br>  
