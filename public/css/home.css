@@ -1,9 +1,7 @@
 .greeting{
     text-align: center;
-    /* background-color:#fff; */
     border-radius: 5px;
     padding: 10px;
-    /* flex: 1; */
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -27,27 +25,15 @@
     margin-right: 0;
 }
 
-/* .card{
-    width:55rem;
-    border-radius: 50%;
-} */
-
-
 .cards{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    /* width: 40%; */
     border-radius: 5px;
     background-color: whitesmoke;
     margin-left: 25px;
     margin: 10px;
     padding: 10px;
-    /* flex: 1; */
-    /* uncomment from here to go back to single card */
-    /* width: 75%;
-    margin-left: auto;
-    margin-right: auto; */
-   
+
 }
 
 .scrollable_cards{
@@ -55,7 +41,6 @@
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    /* width: 90%; */
 }
 
 .cards h4{
@@ -71,23 +56,20 @@
 .clock_card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    /* width: 40%; */
     border-radius: 5px;
     background-color: whitesmoke;
     margin-left: 25px;
     margin: 10px;
     padding: 10px;
-    /* margin-left: -100px; */
-    /* width: 33%; */
-    /* height: fit-content;
-    margin-bottom: auto;
-    margin-top: auto; */
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
     width: 49%;
+}
+
+#clock_widget{
+    padding-top: inherit;
+    padding-bottom: inherit;
 }
 
 .clock_card:hover{
@@ -97,15 +79,11 @@
 .weather_card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    /* width: 40%; */
     border-radius: 5px;
     background-color: whitesmoke;
     margin-left: 25px;
     margin: 10px;
     padding: 10px;
-    /* margin-left: -100px; */
-    /* width: 33%; */
-    /* height: fit-content; */
     width: 49%;
     margin-right: auto;
     margin-left: auto;
@@ -136,7 +114,6 @@
 }
 
 ul.items_list{
-    /* font-size: 20px; */
     font-size: 16px;
     padding: 0px;
     margin: 25px;
@@ -147,14 +124,10 @@ ul.items_list{
     align-items: center;
 }
 
-/* ul.items_list{
-    font-size: 20px;
-} */
 
 .fa {
     padding: 20px;
     font-size: 30px;
-    /* width: 50px; */
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
