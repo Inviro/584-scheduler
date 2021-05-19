@@ -17,8 +17,9 @@
 <div class="contain">
     <div class="card">
         <article class="card-body">
-            <form action="/home/{{$event->id}}" method="PUT">
+            <form action="{{route('home.update',$event->id)}}" method="POST">
             @csrf
+            @method('PUT')
                 <div class="form-group">
                     <label>Description</label>
                     <input name="title" class="form-control"  type="text" value="{{$event->title}}">
@@ -45,6 +46,12 @@
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">update</button>
                 </div>                                                         
+            </form>
+
+            <form method="POST" action="{{route('home.destroy',$event->id)}}">
+                @csrf
+                @method('DELETE')
+                <button type="submit" onclick="return confirm('Are you sure?')"class="btn small btn-danger btn-block"><span class="fa fa-remove"></span>delete</button>
             </form>
         </article>
     </div> <!-- card.// -->

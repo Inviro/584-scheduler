@@ -21,7 +21,7 @@
         <a href = "/home/{{$event->id}}"style="color: black">
             <div class="cards">
                     <div class="cards_desc">
-                        <h4> Monday 5/17</h4>
+                        <h4>{{$event->eventTime}}</h4>
                         <h6>{{$event->title}}</h6>
                         <ul class="items_list">
                             <li class="list-group-item">
