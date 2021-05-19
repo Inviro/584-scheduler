@@ -11,9 +11,7 @@
         <h1>Hello, {{Auth::user()->name}}</h1>
         <h2>New Event:</h2>
     </div>
-
     <div class="break"></div>
-
 </div>
 
 <!-- button to edit -->
@@ -64,16 +62,8 @@
                 <button type="submit" onclick="return confirm('Are you sure?')"class="btn small btn-danger btn-block"><span class="fa fa-remove"></span>delete</button>
             </form>
         </article>
-
-        <!-- <a href="#" return="return confirm('Are you sure?')" class="btn btn-secondary btn-lg" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px;">
-            Delete Event
-        </a> -->
-
-        <!-- <button type="submit" onclick="return confirm('Are you sure?')"class="btn small btn-danger btn-block" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px; width:50%">
-            delete
-        </button> -->
-
     </div> <!-- card.// -->
+</div>
 
 </div>
 
@@ -87,7 +77,6 @@
             <a href="https://www.youtube.com" class="fa fa-youtube" target="_blank"></a>
             <a href="https://www.instagram.com" class="fa fa-instagram" target="_blank"></a>
             <a href="https://www.reddit.com" class="fa fa-reddit" target="_blank"></a>
-
         </div>
         <!-- <iframe src="https://open.spotify.com/embed/track/3w2GGz0HjIu9OcWXINRFJR" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
     </div>
