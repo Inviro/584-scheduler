@@ -38,7 +38,7 @@ Auth::routes(['verify' => true]);
 
  
 Route::group(['middleware' => ['prevent-back-history']], function() {
-//     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/settings', [App\Http\Controllers\HomeController::class, 'settings'])->name('settings');
     Route::post('updateProfile', [App\Http\Controllers\HomeController::class, 'updateProfile']);
     Route::post('toggleDarkMode', [App\Http\Controllers\HomeController::class, 'toggleDarkMode']);
