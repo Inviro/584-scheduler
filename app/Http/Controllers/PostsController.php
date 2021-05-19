@@ -134,7 +134,7 @@ class PostsController extends Controller
         $event->eventPassword = $request->eventPassword;
         $event->save();
         // Post::update($request->all());
-        return redirect()->route(route:'home.index');
+        return redirect()->route('home');
     }
 
     /**
@@ -147,6 +147,6 @@ class PostsController extends Controller
     {
         $event = Post::find($id);
         $event->delete();
-        return redirect()->route(route:'home.index');
+        return redirect()->route('home');
     }
 }
