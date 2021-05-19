@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\homeController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
