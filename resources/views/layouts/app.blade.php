@@ -34,11 +34,11 @@
 
 <body>
   <div id="app">
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm {{ $dark_mode ? "navbar-dark bg-dark" : "navbar-light bg-white"}}">
+    <nav class="navbar navbar-expand-md shadow-sm {{ $dark_mode ? "navbar-dark bg-dark" : "navbar-light bg-white"}}">
       <div class="container">
         <a class="navbar-brand" href="{{ url('/home') }}">
           <!-- {{ str_replace('_', ' ', config('app.name', 'Laravel')) }} -->
-          <button class="logo_button {{ $dark_mode ? "text-light bg-dark" : ""}}" style="font-size:36px; border: none;">KhroNotes</button>
+          <button class="logo_button {{ $dark_mode ? "text-light bg-dark" : "" }}" style="font-size:36px; border: none;">KhroNotes</button>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
           <span class="navbar-toggler-icon"></span>
