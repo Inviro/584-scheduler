@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['dark_mode' => Auth::user() && Auth::user()->dark_mode])
 
 @section('content')
 
@@ -90,10 +90,7 @@
     <footer class="footer">
         <img src="https://cdn.glitch.com/8ad63a84-17dc-432f-8c26-21efc67491b6%2FTransparentLogo.png?v=1620239174125" style="max-width:1vw;"/>
         <br>
-        &copy;2021 KhroNotes<br>
-        
+        &copy;2021 KhroNotes
+        <br>
     </footer>
-
-
-
 @endsection

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['dark_mode' => Auth::user() && Auth::user()->dark_mode])
 
 @section('content')
 <div class="container">
