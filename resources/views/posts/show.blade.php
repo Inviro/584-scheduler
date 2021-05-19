@@ -1,4 +1,7 @@
-@extends('layouts.app')
+@php
+    $dark_mode = Auth::user() ? Auth::user()->dark_mode : false
+@endphp
+@extends('layouts.app', ['dark_mode' => $dark_mode])
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
@@ -20,7 +23,7 @@
     <div class="scrollable_cards">
             <div class="cards">
                     <div class="cards_desc">
-                        <h4> Monday 5/17
+                        <h4> {{$event->eventTime}}</h4>
                         <h6>{{$event->title}}</h6>
                         <ul class="items_list">
                             <li class="list-group-item">

@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,10 +35,13 @@ Route::get(env('GOOGLE_REDIRECT'), 'App\Http\Controllers\Auth\GoogleController@h
 Auth::routes(['verify' => true]);
 
 // Everything wrapped in here will be protected from back history
-Route::group(['middleware' => ['prevent-back-history']],function(){
-    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+ 
+Route::group(['middleware' => ['prevent-back-history']], function() {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/settings', [App\Http\Controllers\HomeController::class, 'settings'])->name('settings');
+    Route::post('updateProfile', [App\Http\Controllers\HomeController::class, 'updateProfile']);
+    Route::post('toggleDarkMode', [App\Http\Controllers\HomeController::class, 'toggleDarkMode']);
     Route::resource('home', PostsController::class);
 });
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon;
 
 class PostsController extends Controller
 {
@@ -21,6 +22,12 @@ class PostsController extends Controller
         // $events =  Post::all(); //shows all events
     
         $events = Post::where('email',$loggedInUser)->paginate(5);
+
+        // $dayofweek = Carbon::parse($events->eventTime)->format(format:"Y-m-d h:m:s");'
+        foreach ($events as $event){
+            $dayofweek = Carbon::parse($event->eventTime)->format("D, M d Y");
+            $event->eventTime = $dayofweek;
+        }
         return view('home')
                     ->with('events', $events);
     }
@@ -73,6 +80,8 @@ class PostsController extends Controller
     public function show($id)
     {
         $event = Post::find($id);
+        $dayofweek = Carbon::parse($event->eventTime)->format("D, M d Y");
+        $event->eventTime = $dayofweek;
         return view('posts.show')->with('event', $event);
     }
 
@@ -99,6 +108,7 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // return $request->input();
         $loggedInUser = Auth::user()->email;
         $event = Post::find($id);
         $request['email']= $loggedInUser;
@@ -124,7 +134,7 @@ class PostsController extends Controller
         $event->eventPassword = $request->eventPassword;
         $event->save();
         // Post::update($request->all());
-        return redirect('home');
+        return redirect()->route('home.index');
     }
 
     /**
@@ -135,6 +145,8 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $event = Post::find($id);
+        $event->delete();
+        return redirect()->route('home.index');
     }
 }
