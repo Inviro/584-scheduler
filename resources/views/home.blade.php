@@ -8,7 +8,7 @@
 
 <div class="container">
     <div class="greeting">
-        <h1>Hello, Name</h1>
+        <h1>Hello, {{ Auth::user()->name }}</h1>
         <h2>This Week's Schedule:</h2>
     </div>
 
