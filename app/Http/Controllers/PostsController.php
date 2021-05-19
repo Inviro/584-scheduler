@@ -25,7 +25,7 @@ class PostsController extends Controller
 
         // $dayofweek = Carbon::parse($events->eventTime)->format(format:"Y-m-d h:m:s");'
         foreach ($events as $event){
-            $dayofweek = Carbon::parse($event->eventTime)->format(format:"D, M d Y");
+            $dayofweek = Carbon::parse($event->eventTime)->format("D, M d Y");
             $event->eventTime = $dayofweek;
         }
         return view('home')
