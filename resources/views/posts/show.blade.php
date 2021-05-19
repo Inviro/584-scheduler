@@ -14,7 +14,7 @@
 </div>
 
 <!-- button to edit -->
-<a href="/home/edit/{{$event->id}}" class="btn btn-secondary btn-lg" style="padding-right: 15px;padding-left: 15px;margin-right: 35%;margin-left: 35%; float:right;">Edit</a>
+<a href="/home/{{$event->id}}/edit" class="btn btn-secondary btn-lg" style="padding-right: 15px;padding-left: 15px;margin-right: 35%;margin-left: 35%; float:right;">Edit</a>
 
 <div class = "container">
     <div class="scrollable_cards">

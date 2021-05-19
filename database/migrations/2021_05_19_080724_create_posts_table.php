@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('email');
-            $table->time('eventTime');
+            $table->dateTime('eventTime');
             $table->string('eventLink');
             $table->string('eventId');
             $table->string('eventPassword');

@@ -8,6 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    protected $table = 'posts';
     public $primaryKey = 'id';
+    protected $table = 'posts';
+    public $timestamps =false;
+    protected $fillable = [
+        'title',
+        'email',
+        'eventTime',
+        'eventLink',
+        'eventId',
+        'eventPassword'
+    ];
 }

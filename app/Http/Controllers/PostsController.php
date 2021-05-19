@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
+use Illuminate\Support\Facades\Validator;
 
 class PostsController extends Controller
 {
@@ -43,9 +44,23 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         //store request to database then return to dashboard
-        $event = new Post;
-        $WoRequestObj = $request->get('responseObj');
-        error_log($WoRequestObj);
+        $loggedInUser = Auth::user()->email;
+        $request['email']= $loggedInUser;
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'email' => 'required',
+            'eventTime'=> 'required',
+            'eventLink' => 'required',
+            'eventId' =>'required',
+            'eventPassword' =>'required'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('home/create')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
+        Post::create($request->all());
         return redirect('home');
     }
 
@@ -69,7 +84,10 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $event = Post::find($id);
+        $DB_date = date('m-d-Y H:i:s', strtotime($event->eventTime));
+        $event->eventTime = $DB_date;
+        return view('posts.update')->with('event',$event);
     }
 
     /**
@@ -81,7 +99,32 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $loggedInUser = Auth::user()->email;
+        $event = Post::find($id);
+        $request['email']= $loggedInUser;
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'email' => 'required',
+            'eventTime'=> 'required',
+            'eventLink' => 'required',
+            'eventId' =>'required',
+            'eventPassword' =>'required'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('home/{{$id}}/edit')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
+        $event->title = $request->title;
+        $event->email = $request->email;
+        $event->eventTime = $request->eventTime;
+        $event->eventLink = $request->eventLink;
+        $event->eventId = $request->eventId;
+        $event->eventPassword = $request->eventPassword;
+        $event->save();
+        // Post::update($request->all());
+        return redirect('home');
     }
 
     /**

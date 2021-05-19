@@ -12,6 +12,15 @@
     <div class="break"></div>
 
 </div>
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 <!-- button to edit -->
 <div class="contain">
@@ -34,10 +43,12 @@
                 <div class="form-group">
                     <label>Meeting Password</label>
                     <input name="eventPassword" class="form-control" placeholder="" type="text">
-                </div>
+                </div>  
                 <div class="form-group">
-                    <label>Zoom date and time</label>
-                    <input name="eventTime" class="form-control" placeholder="" type="date">
+                    <label for="eventTime">Zoom Date and time</label>
+                    <div class="col-13">
+                        <input class="form-control" type="datetime-local" value="" id="eventTime"name="eventTime"placeholder="">
+                    </div>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">Create</button>
