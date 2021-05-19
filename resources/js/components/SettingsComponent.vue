@@ -14,7 +14,7 @@
                 </div>
                 <div class="form-group">
                   <label for="email">Email address</label>
-                  <input type="email" class="form-control profile-field" id="email" :value="user.email" onkeyup="emailCheck()" disabled>
+                  <input type="email" name="email" class="form-control profile-field" id="email" :value="user.email" onkeyup="emailCheck()" disabled>
                   <span id="emailWarning" class="text-danger d-none" style="margin-top:.25rem;font-size:.875em;">Please provide a valid email address</span>
                 </div>
                 <div class="form-group">
