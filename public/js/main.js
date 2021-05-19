@@ -32,7 +32,6 @@ function cancelChangesBtn() {
   for(let i = inputField.length - 1; i >= 0; i--){
     inputField[i].toggleAttribute("disabled");
   }
-
 }
 
 function nameCheck() {

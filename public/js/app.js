@@ -1929,13 +1929,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+      darkModeSubmitDisabled: true
     };
   },
-  props: ['user']
+  methods: {
+    toggleDarkMode: function toggleDarkMode() {
+      this.darkModeSubmitDisabled = !this.darkModeSubmitDisabled;
+    }
+  },
+  props: ['user', 'dark_mode']
 });
 
 /***/ }),
@@ -37715,7 +37728,63 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm._m(3)
+      _c("div", { staticClass: "col-md-8 mt-4" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [_vm._v("Change Theme")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c(
+              "form",
+              { attrs: { method: "POST", action: "toggleDarkMode" } },
+              [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("div", { staticClass: "custom-control custom-switch" }, [
+                    _c("input", {
+                      attrs: { type: "hidden", name: "_token" },
+                      domProps: { value: _vm.csrf }
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "custom-control-input",
+                      attrs: {
+                        type: "checkbox",
+                        id: "dark-mode-toggle",
+                        name: "darkmode"
+                      },
+                      domProps: { checked: _vm.dark_mode },
+                      on: { click: _vm.toggleDarkMode }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      {
+                        staticClass: "custom-control-label",
+                        attrs: { for: "dark-mode-toggle" }
+                      },
+                      [_vm._v("Enable Dark Mode")]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-success",
+                      attrs: {
+                        type: "submit",
+                        disabled: this.darkModeSubmitDisabled,
+                        id: "submit-dark-mode"
+                      }
+                    },
+                    [_vm._v(" Save Changes")]
+                  )
+                ])
+              ]
+            )
+          ])
+        ])
+      ])
     ])
   ])
 }
@@ -37780,34 +37849,6 @@ var staticRenderFns = [
       },
       [_c("i", { staticClass: "fas fa-check" }), _vm._v(" Save Changes")]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-8 mt-4" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }, [_vm._v("Change Theme")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c("div", { staticClass: "custom-control custom-switch" }, [
-            _c("input", {
-              staticClass: "custom-control-input",
-              attrs: { type: "checkbox", id: "enableDarkMode" }
-            }),
-            _vm._v(" "),
-            _c(
-              "label",
-              {
-                staticClass: "custom-control-label",
-                attrs: { for: "enableDarkMode" }
-              },
-              [_vm._v("Enable Dark Mode")]
-            )
-          ])
-        ])
-      ])
-    ])
   }
 ]
 render._withStripped = true

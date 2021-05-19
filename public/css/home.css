@@ -1,0 +1,194 @@
+
+.greeting{
+    text-align: center;
+    /* background-color:#fff; */
+    border-radius: 5px;
+    padding: 10px;
+    /* flex: 1; */
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+    border: 0px;
+}
+
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* .card{
+    width:55rem;
+    border-radius: 50%;
+} */
+
+
+.cards{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    /* width: 40%; */
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin-left: 25px;
+    margin: 10px;
+    padding: 10px;
+    /* flex: 1; */
+    /* uncomment from here to go back to single card */
+    /* width: 75%;
+    margin-left: auto;
+    margin-right: auto; */
+   
+}
+
+.scrollable_cards{
+    /* Trying to make div scrollable */
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* width: 90%; */
+}
+
+.cards h4{
+    text-align: center;
+    padding: 0%;
+    margin: 10px;
+}
+
+.cards:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.clock_card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    /* width: 40%; */
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin-left: 25px;
+    margin: 10px;
+    padding: 10px;
+    /* margin-left: -100px; */
+    /* width: 33%; */
+    /* height: fit-content;
+    margin-bottom: auto;
+    margin-top: auto; */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 49%;
+}
+
+.clock_card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.weather_card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    /* width: 40%; */
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin-left: 25px;
+    margin: 10px;
+    padding: 10px;
+    /* margin-left: -100px; */
+    /* width: 33%; */
+    /* height: fit-content; */
+    width: 49%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.weather_card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.social_card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin-left: 25px;
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social_buttons{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+ul.items_list{
+    /* font-size: 20px; */
+    font-size: 16px;
+    padding: 0px;
+    margin: 25px;
+    width: 280px;
+}
+
+.list-group-item{
+    align-items: center;
+}
+
+/* ul.items_list{
+    font-size: 20px;
+} */
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    /* width: 50px; */
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+    width: 70px;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+  .fa-reddit {
+    background: #ff5700;
+    color: white;
+  }
+
