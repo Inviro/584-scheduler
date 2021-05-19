@@ -37681,6 +37681,7 @@ var render = function() {
                   staticClass: "form-control profile-field",
                   attrs: {
                     type: "email",
+                    name: "email",
                     id: "email",
                     onkeyup: "emailCheck()",
                     disabled: ""
