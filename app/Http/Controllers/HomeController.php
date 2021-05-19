@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\home;
 use App\Models\User;
 use Socialite;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
-class homeController extends Controller
+class HomeController extends Controller
 {
 
     /**
@@ -19,6 +21,12 @@ class homeController extends Controller
     // @foreach($events as $event)
     // <p>{{$event->title}}</p>
     // @endforeach
+    public function __construct()
+    {
+        $this->middleware(['auth','verified']);
+    }
+
+
     public function index()
     {
         // show all values in sql for home dashboard according to email 
@@ -30,6 +38,21 @@ class homeController extends Controller
                     ->with('events', $events);
     }
 
+    public function updateProfile(Request $request) 
+    {
+        $passwordCheck = $request->input('oldpassword');
+        $userUpdate = [
+            'name'          => $request->name,
+            'email'         => $request->email
+        ];
+        if(Hash::check($passwordCheck, Auth::user()->password)) {
+            DB::table('users')->where('id', '=', Auth::user()->id)->update($userUpdate);
+        }
+        else {
+            
+        }
+        return redirect('settings');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -95,5 +118,10 @@ class homeController extends Controller
     {
         //
 
+    }
+
+    public function settings()
+    {
+        return view('settings');
     }
 }
