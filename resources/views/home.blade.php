@@ -5,25 +5,39 @@
 
 <div class="container">
     <div class="greeting">
-        <h1>Hello, Name</h1>
+        <h1>Hello, {{Auth::user()->name}}</h1>
         <h2>This Week's Schedule:</h2>
     </div>
 
     <div class="break"></div>
-<div class="scrollable_cards">
-    <div class="cards">
-                    <div class="cards_desc">
-                        <h4> Monday 5/17 </h4>
-                            <ul class="items_list">
-                                <li class="list-group-item">
-                                    <a href="www.zoom.com/" class="card-link">Zoom Link</a>
-                                </li>
-                                <li class="list-group-item">Second Item</li>
-                                <li class="list-group-item">Third Item</li>
-                            </ul>
-                    </div>
     </div>
 
+<!-- button to edit -->
+<a href="/home/create/" class="btn btn-secondary btn-lg" style="padding-right: 15px;padding-left: 15px;margin-right: 35%;margin-left: 35%; float:right;">New</a>
+
+<div class = "container">
+<div class="scrollable_cards">
+        @foreach($events as $event)
+        <a href = "/home/{{$event->id}}"style="color: black">
+            <div class="cards">
+                    <div class="cards_desc">
+                        <h4> Monday 5/17
+                        <h6>{{$event->title}}</h6>
+                        <ul class="items_list">
+                            <li class="list-group-item">
+                                <a href="{{$event->eventLink}}" class="card-link">Zoom link</a>
+                            </li>
+                            <li class="list-group-item">{{$event->eventId}}</li>
+                            <li class="list-group-item">{{$event->eventPassword}}</li>
+
+                        </ul>
+                    </div>
+                </div>
+        
+        
+        </a>
+        @endforeach
+        {{$events->links()}}
     <div class="cards">
                     <div class="cards_desc">
                         <h4> Tuesday 5/18 </h4>

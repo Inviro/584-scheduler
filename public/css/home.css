@@ -64,7 +64,11 @@
     padding: 0%;
     margin: 10px;
 }
-
+.contain{
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 50px;
+}
 .cards:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }

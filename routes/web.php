@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\homeController;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,9 +33,10 @@ Auth::routes(['verify' => true]);
 
 // Everything wrapped in here will be protected from back history
 Route::group(['middleware' => ['prevent-back-history']],function(){
-    Route::resource('home', homeController::class);
     // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+    Route::resource('home', PostsController::class);
 });
 
 // resource  controller to handle all CRUD request to show events on home dashboard
