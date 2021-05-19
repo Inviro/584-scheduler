@@ -53,6 +53,13 @@ class HomeController extends Controller
         }
         return redirect('settings');
     }
+
+    public function toggleDarkMode(Request $request) 
+    {
+        DB::table('users')->where('id', '=', Auth::user()->id)->update(['dark_mode' => (strcmp($request->darkmode, "on") === 0)]);
+        return redirect('settings');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
