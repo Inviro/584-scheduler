@@ -8,9 +8,7 @@
 
 <div class="container">
     <div class="greeting">
-
         <h1>Hello, {{ Auth::user()->name }}</h1>
-
         <h2>This Week's Schedule:</h2>
     </div>
 
@@ -26,21 +24,18 @@
         @foreach($events as $event)
         <a href = "/home/{{$event->id}}"style="color: black">
             <div class="cards">
-                    <div class="cards_desc">
-                        <h4>{{$event->eventTime}}</h4>
-                        <h6>{{$event->title}}</h6>
-                        <ul class="items_list">
-                            <li class="list-group-item">
-                                <a href="{{$event->eventLink}}" class="card-link">Zoom link</a>
-                            </li>
-                            <li class="list-group-item">{{$event->eventId}}</li>
-                            <li class="list-group-item">{{$event->eventPassword}}</li>
-
-                        </ul>
-                    </div>
+                <div class="cards_desc">
+                    <h4>{{$event->eventTime}}</h4>
+                    <h6>{{$event->title}}</h6>
+                    <ul class="items_list">
+                        <li class="list-group-item">
+                            <a href="{{$event->eventLink}}" class="card-link">Zoom link</a>
+                        </li>
+                        <li class="list-group-item">{{$event->eventId}}</li>
+                        <li class="list-group-item">{{$event->eventPassword}}</li>
+                    </ul>
                 </div>
-        
-        
+            </div>
         </a>
         @endforeach
         {{$events->links()}}
@@ -63,8 +58,6 @@
     </div>
 
     <div class="weather_card">
-
-
         <a class="weatherwidget-io" href="https://forecast7.com/en/34d28n118d44/san-fernando/?unit=us" data-label_1="NORTHRIDGE, CA" data-label_2="WEATHER" data-days="5" data-theme="weather_one" >NORTHRIDGE, CA WEATHER</a>
     </div>
 
@@ -77,11 +70,8 @@
             <a href="https://www.youtube.com" class="fa fa-youtube" target="_blank"></a>
             <a href="https://www.instagram.com" class="fa fa-instagram" target="_blank"></a>
             <a href="https://www.reddit.com" class="fa fa-reddit" target="_blank"></a>
-
         </div>
     </div>
-
-
 </div>
 
 <!-- the footer -->

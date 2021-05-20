@@ -11,9 +11,7 @@
         <h1>Hello, {{Auth::user()->name}}</h1>
         <h2>New Event:</h2>
     </div>
-
     <div class="break"></div>
-
 </div>
 
 <!-- button to edit -->
@@ -58,8 +56,8 @@
             </form>
 
         </article>
-
     </div> <!-- card.// -->
+</div>
 
 </div>
 
@@ -73,7 +71,6 @@
             <a href="https://www.youtube.com" class="fa fa-youtube" target="_blank"></a>
             <a href="https://www.instagram.com" class="fa fa-instagram" target="_blank"></a>
             <a href="https://www.reddit.com" class="fa fa-reddit" target="_blank"></a>
-
         </div>
         <!-- <iframe src="https://open.spotify.com/embed/track/3w2GGz0HjIu9OcWXINRFJR" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
     </div>
