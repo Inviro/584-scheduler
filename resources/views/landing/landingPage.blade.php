@@ -12,10 +12,10 @@
 
       <div class="desc_box">        
         <p class={{ $dark_mode ? "text-light" : "" }}>
-          KhroNotes is a helpful tool to keep track of all of your scheduled online meetings. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          The transition to online learning has made keeping track of different Zoom meeting 
+          links difficult, sometimes resulting in delays attending classes on time. KhroNotes is a 
+          sophisticated scheduling application which will provide users with the ability to create accounts and 
+          store links to their scheduled Zoom meetings.
         </p>      
       </div>
       
