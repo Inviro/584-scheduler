@@ -17,19 +17,23 @@ class PostsController extends Controller
      */
     public function index()
     {
-        // show all values in sql for home dashboard according to email 
-        $loggedInUser = Auth::user()->email;
-        // $events =  Post::all(); //shows all events
-    
-        $events = Post::where('email',$loggedInUser)->paginate(5);
+        if (Auth::user()) {
+            // show all values in sql for home dashboard according to email 
+            $loggedInUser = Auth::user()->email;
+            // $events =  Post::all(); //shows all events
+        
+            $events = Post::where('email',$loggedInUser)->paginate(5);
 
-        // $dayofweek = Carbon::parse($events->eventTime)->format(format:"Y-m-d h:m:s");'
-        foreach ($events as $event){
-            $dayofweek = Carbon::parse($event->eventTime)->format("D, M d Y");
-            $event->eventTime = $dayofweek;
+            // $dayofweek = Carbon::parse($events->eventTime)->format(format:"Y-m-d h:m:s");'
+            foreach ($events as $event){
+                $dayofweek = Carbon::parse($event->eventTime)->format("D, M d Y");
+                $event->eventTime = $dayofweek;
+            }
+            return view('home')
+                        ->with('events', $events);
+        } else {
+            return redirect('login');
         }
-        return view('home')
-                    ->with('events', $events);
     }
 
     /**

@@ -31,12 +31,7 @@ Route::get('/login', function () {
 Route::get('auth/google', 'App\Http\Controllers\Auth\GoogleController@redirectToProvider');
 Route::get(env('GOOGLE_REDIRECT'), 'App\Http\Controllers\Auth\GoogleController@handleProviderCallback');
 
-// Will require user to be verified before being able to access site
-Auth::routes(['verify' => true]);
-
 // Everything wrapped in here will be protected from back history
-
- 
 Route::group(['middleware' => ['prevent-back-history']], function() {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/settings', [App\Http\Controllers\HomeController::class, 'settings'])->name('settings');
@@ -44,6 +39,9 @@ Route::group(['middleware' => ['prevent-back-history']], function() {
     Route::post('toggleDarkMode', [App\Http\Controllers\HomeController::class, 'toggleDarkMode']);
     Route::resource('home', PostsController::class);
 });
+
+// Will require user to be verified before being able to access site
+Auth::routes(['verify' => true]);
 
 // resource  controller to handle all CRUD request to show events on home dashboard
 
