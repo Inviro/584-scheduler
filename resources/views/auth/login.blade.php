@@ -60,19 +60,19 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                <form action="auth/google">
-                                    <button class="btn btn-outline-dark" type="submit" onclick="console.log('clicked!')">
-                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="{{ URL::to('/') }}/images/Google_'G'_Logo.svg" />
-                                        Login with Google
-                                    </button>
-                                </form>
-
+                                <button class="btn btn-outline-dark" type="button" onclick="location.href='auth/google'">
+                                    <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="{{ URL::to('/') }}/images/Google_'G'_Logo.svg" />
+                                    Login with Google
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
-
                             </div>
                         </div>
                     </form>
