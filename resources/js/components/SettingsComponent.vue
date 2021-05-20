@@ -25,8 +25,8 @@
                 <div class="form-check">
                 </div>
                 <button id="updateProfile" type="button" class="btn btn-info" style="color:white" onclick="updateProfileBtnToggle()">Update Account</button>
-                <button id="cancelChanges" type="button" class="btn btn-outline-danger d-none" onclick="cancelChangesBtn()"><i class="fas fa-times"></i>&nbsp;Cancel</button>
-                <button id="saveChanges" type="submit" class="btn btn-success d-none"><i class="fas fa-check"></i>&nbsp;Save Changes</button>
+                <button id="cancelChanges" type="button" class="btn btn-outline-danger d-none" onclick="cancelChangesBtn()"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Cancel</button>
+                <button id="saveChanges" type="submit" class="btn btn-success d-none"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Save Changes</button>
               </form>
             </div>
           </div>

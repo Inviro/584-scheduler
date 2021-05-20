@@ -37835,7 +37835,13 @@ var staticRenderFns = [
           onclick: "cancelChangesBtn()"
         }
       },
-      [_c("i", { staticClass: "fas fa-times" }), _vm._v(" Cancel")]
+      [
+        _c("i", {
+          staticClass: "fa fa-times",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v(" Cancel")
+      ]
     )
   },
   function() {
@@ -37848,7 +37854,13 @@ var staticRenderFns = [
         staticClass: "btn btn-success d-none",
         attrs: { id: "saveChanges", type: "submit" }
       },
-      [_c("i", { staticClass: "fas fa-check" }), _vm._v(" Save Changes")]
+      [
+        _c("i", {
+          staticClass: "fa fa-check",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v(" Save Changes")
+      ]
     )
   }
 ]
