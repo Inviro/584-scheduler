@@ -25,7 +25,6 @@
 
   <!-- import the webpage's javascript file -->
   <script src="/script.js" defer></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -77,11 +76,11 @@
               </a>
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/home"><i class="fas fa-home"></i>&nbsp;Home</a>
-                <a class="dropdown-item" href="/settings"><i class="fas fa-cog"></i>&nbsp;Settings</a>
+                <a class="dropdown-item" href="/home"><i class="fa fa-sm fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+                <a class="dropdown-item" href="/settings"><i class="fa fa-sm fa-cog" aria-hidden="true"></i>&nbsp;Settings</a>
                 <a class="dropdown-item" href="{{ route('logout') }}" style="color:red;font-weight:bold;" onclick="event.preventDefault();
                                                                       document.getElementById('logout-form').submit();">
-                  <i class="fas fa-sign-out-alt"></i>&nbsp;Logout
+                  <i class="fa fa-sm fa-sign-out" aria-hidden="true"></i>&nbsp;Logout
                 </a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
