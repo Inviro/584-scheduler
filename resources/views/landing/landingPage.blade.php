@@ -52,8 +52,6 @@
         <img class="google_logo" src="https://cdn.glitch.com/8ad63a84-17dc-432f-8c26-21efc67491b6%2Fgoogle-calendar-logo.png?v=1620246249410"/>
       </div> -->
 
-
-      
       <div class="break"></div>
 
       <div class="why_khro {{ $dark_mode ? "text-light bg-dark" : "" }}">
@@ -78,16 +76,7 @@
             Login with Google
           </button>
         </form>
+
       </div><!--get_started-->
-      
     </div><!--container-->
-    
-    
-    <!-- the footer -->
-    <footer class="footer {{ $dark_mode ? "text-light bg-dark" : "" }}">
-        <img src="https://cdn.glitch.com/8ad63a84-17dc-432f-8c26-21efc67491b6%2FTransparentLogo.png?v=1620239174125" style="max-width:1vw;"/>
-        <br>
-        &copy;2021 KhroNotes
-        {{-- <br> --}}
-    </footer>
 @endsection

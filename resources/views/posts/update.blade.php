@@ -59,9 +59,7 @@
     </div> <!-- card.// -->
 </div>
 
-</div>
-
-
+<div>
     <div class="break"></div>
 
     <div class="social_card">
@@ -75,11 +73,4 @@
         <!-- <iframe src="https://open.spotify.com/embed/track/3w2GGz0HjIu9OcWXINRFJR" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
     </div>
 </div>
-
-<!-- the footer -->
-    <footer class="footer">
-        <img src="https://cdn.glitch.com/8ad63a84-17dc-432f-8c26-21efc67491b6%2FTransparentLogo.png?v=1620239174125" style="max-width:1vw;"/>
-        <br>
-        &copy;2021 KhroNotes<br>  
-    </footer>
 @endsection
