@@ -40,5 +40,4 @@
     Edit Event
 </a>
 <div class="break"></div>
-{{-- </div> --}}
 @endsection

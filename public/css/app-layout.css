@@ -1,0 +1,21 @@
+:root {
+  --footer-size: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Includes nav bar and content */
+#app {
+  height: 100vh;
+}
+
+#footer {
+  position: relative;
+}
