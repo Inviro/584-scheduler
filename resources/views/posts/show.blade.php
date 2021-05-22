@@ -11,12 +11,8 @@
         <h1>Hello, {{Auth::user()->name}}</h1>
         <h2>This Week's Schedule:</h2>
     </div>
-
     <div class="break"></div>
 </div>
-
-<!-- button to edit -->
-<!-- <a href="/home/{{$event->id}}/edit" class="btn btn-secondary btn-lg" style="padding-right: 15px;padding-left: 15px;margin-right: 35%;margin-left: 35%; float:right;">Edit</a> -->
 
 <div class = "container">
     <div class="scrollable_cards">
@@ -36,7 +32,7 @@
     </div>
 </div>
 <div class="break"></div>
-<a href="/home/{{$event->id}}/edit" class="btn btn-secondary btn-lg" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px;">
+<a href="/home/{{$event->id}}/edit" class="btn btn-lg {{$dark_mode ? "btn-primary": "btn-secondary"}}" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px;">
     Edit Event
 </a>
 <div class="break"></div>

@@ -57,7 +57,7 @@
       <div class="why_khro {{ $dark_mode ? "text-light bg-dark" : "" }}">
         <h1>Why KhroNotes?</h1>
           <p>Being organized comes with its benefits: </p>
-          <ul class="benefits">
+          <ul class="benefits ml-4">
             <li>Save time by not spending time looking for your information.</li>
             <li>Reduce stress related to misplaced or lost information.</li>
             <li>Manage many activities and deadlines more efficiently.</li>
