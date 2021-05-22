@@ -1,5 +1,5 @@
 :root {
-  --footer-size: 30px;
+  --footer-size: 123px;
 }
 
 * {
@@ -13,9 +13,22 @@ html, body {
 
 /* Includes nav bar and content */
 #app {
-  height: 100vh;
+  min-height: 100vh;
+}
+
+#main-content {
+  overflow: auto;
+  padding-bottom: var(--footer-size);
 }
 
 #footer {
   position: relative;
+  text-align: center;
+  margin-top: calc(var(--footer-size) * -1);
+}
+
+
+#footer > img {
+  display: block;
+  margin: auto;
 }
