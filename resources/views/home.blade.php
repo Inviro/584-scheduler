@@ -11,16 +11,8 @@
         <h1>Hello, {{ Auth::user()->name }}</h1>
         <h2>This Week's Schedule:</h2>
     </div>
-
-    <div class="break"></div>
-    </div>
-
-<!-- button to edit -->
-<!-- <a href="/home/create/" class="btn btn-secondary btn-lg" style="padding-right: 15px;padding-left: 15px;margin-right: 35%;margin-left: 35%; float:right;">New</a> -->
-
-<div class = "container">
-
-<div class="scrollable_cards">
+    <span class="break"></span>
+    <div class="scrollable_cards">
         @foreach($events as $event)
         <a href = "/home/{{$event->id}}"style="color: black">
             <div class="cards">
@@ -39,13 +31,10 @@
         </a>
         @endforeach
         {{$events->links()}}
-    
-        
-</div>
-
+    </div>
     <div class="break"></div>
-    
-    <a href="/home/create/" class="btn btn-secondary btn-lg" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px;">
+
+    <a href="/home/create/" class="btn btn-lg {{ $dark_mode ? "btn-primary" : "btn-secondary"}}" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px;">
         New Event
     </a>
 
@@ -73,11 +62,4 @@
         </div>
     </div>
 </div>
-
-<!-- the footer -->
-    <footer class="footer">
-        <img src="https://cdn.glitch.com/8ad63a84-17dc-432f-8c26-21efc67491b6%2FTransparentLogo.png?v=1620239174125" style="max-width:1vw;"/>
-        <br>
-        &copy;2021 KhroNotes<br>  
-    </footer>
 @endsection

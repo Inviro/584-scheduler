@@ -1,0 +1,24 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  min-height: 85vh;
+}
+
+#main-content {
+  overflow: auto;
+}
+
+#footer {
+  position: relative;
+  text-align: center;
+}
+
+#footer > img {
+  display: block;
+  margin: auto;
+}
