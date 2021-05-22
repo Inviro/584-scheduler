@@ -34,7 +34,7 @@
     </div>
     <div class="break"></div>
 
-    <a href="/home/create/" class="btn btn-secondary btn-lg" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px;">
+    <a href="/home/create/" class="btn btn-lg {{ $dark_mode ? "btn-primary" : "btn-secondary"}}" style="margin-right: auto; margin-left: auto; margin-top:15px; margin-bottom:15px;">
         New Event
     </a>
 
@@ -61,7 +61,5 @@
             <a href="https://www.reddit.com" class="fa fa-reddit" target="_blank"></a>
         </div>
     </div>
-    <!-- button to edit -->
-    <!-- <a href="/home/create/" class="btn btn-secondary btn-lg" style="padding-right: 15px;padding-left: 15px;margin-right: 35%;margin-left: 35%; float:right;">New</a> -->
 </div>
 @endsection

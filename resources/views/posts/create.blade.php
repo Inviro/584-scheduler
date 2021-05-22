@@ -24,12 +24,12 @@
     </div>
 @endif
 
-    <!-- button to edit -->
+<!-- button to edit -->
 <div class="contain">
     <div class="card">
         <article class="card-body">
             <form action="/home" method="POST">
-            @csrf
+                @csrf
                 <div class="form-group">
                     <label>Description</label>
                     <input name="title" class="form-control" placeholder="Type description here" type="text">
@@ -70,7 +70,6 @@
         <a href="https://www.instagram.com" class="fa fa-instagram" target="_blank"></a>
         <a href="https://www.reddit.com" class="fa fa-reddit" target="_blank"></a>
     </div>
-    <!-- <iframe src="https://open.spotify.com/embed/track/3w2GGz0HjIu9OcWXINRFJR" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+    {{-- <iframe src="https://open.spotify.com/embed/track/3w2GGz0HjIu9OcWXINRFJR" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> --}}
 </div>
-{{-- </div> --}}
 @endsection

@@ -1,28 +1,22 @@
-:root {
-  --footer-size: 123px;
-}
+
 
 * {
   margin: 0;
   padding: 0;
 }
 
-/* Includes nav bar and content */
 #app {
-  min-height: 100vh;
+  min-height: 85vh;
 }
 
 #main-content {
   overflow: auto;
-  padding-bottom: var(--footer-size);
 }
 
 #footer {
   position: relative;
   text-align: center;
-  margin-top: calc(var(--footer-size) * -1);
 }
-
 
 #footer > img {
   display: block;
